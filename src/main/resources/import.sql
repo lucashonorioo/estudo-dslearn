@@ -16,3 +16,7 @@ INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 3);
 INSERT INTO tb_course (name, img_uri, imag_gray_uri) VALUES ('Java Fundamentals','https://img.com/java.png','https://img.com/java-gray.png');
 INSERT INTO tb_course (name, img_uri, imag_gray_uri) VALUES ('Spring Boot Expert','https://img.com/spring.png','https://img.com/spring-gray.png');
 INSERT INTO tb_course (name, img_uri, imag_gray_uri) VALUES ('SQL & Databases','https://img.com/sql.png','https://img.com/sql-gray.png');
+
+INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ('1.0', TIMESTAMP WITH TIME ZONE '2024-01-10 10:00:00-03:00', TIMESTAMP WITH TIME ZONE '2024-04-10 23:59:59-03:00',1);
+INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ('2.0', TIMESTAMP WITH TIME ZONE '2024-02-01 10:00:00-03:00', TIMESTAMP WITH TIME ZONE '2024-05-01 23:59:59-03:00',2);
+INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ('3.0', TIMESTAMP WITH TIME ZONE '2024-03-15 10:00:00-03:00', TIMESTAMP WITH TIME ZONE '2024-06-15 23:59:59-03:00',3);
