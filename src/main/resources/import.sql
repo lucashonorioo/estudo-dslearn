@@ -24,3 +24,7 @@ INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ('3.0
 INSERT INTO tb_resource (title, description, position, img_uri, type, external_link, offer_id) VALUES ('Aula de Introdução','Visão geral do curso e apresentação dos objetivos', 1,'https://img.com/intro.png','1', 'https://youtube.com/watch?v=intro123',1);
 INSERT INTO tb_resource (title, description, position, img_uri, type, external_link, offer_id) VALUES ('Material de Apoio','Slides e PDFs para acompanhamento das aulas',2,'https://img.com/material.png','2','https://drive.google.com/material123',1);
 INSERT INTO tb_resource (title, description, position, img_uri, type, external_link, offer_id) VALUES ('Fórum de Dúvidas','Espaço para tirar dúvidas com os instrutores',3,'https://img.com/forum.png','3','https://plataforma.com/forum',2);
+
+INSERT INTO tb_section (id, title, description, position, img_uri, resource_id, prerequisite_id) VALUES (1,'Introdução ao Curso','Primeiro contato com a plataforma e estrutura do curso',1,'https://img.com/intro.png',1,NULL);
+INSERT INTO tb_section (id, title, description, position, img_uri, resource_id, prerequisite_id) VALUES (2,'Configuração do Ambiente','Passo a passo para configurar o ambiente de desenvolvimento',2,'https://img.com/setup.png',1,1);
+INSERT INTO tb_section (id, title, description, position, img_uri, resource_id, prerequisite_id) VALUES (3,'Primeiro Projeto','Criação do primeiro projeto prático',3,'https://img.com/project.png',2,2);
