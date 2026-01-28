@@ -20,3 +20,7 @@ INSERT INTO tb_course (name, img_uri, imag_gray_uri) VALUES ('SQL & Databases','
 INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ('1.0', TIMESTAMP WITH TIME ZONE '2024-01-10 10:00:00-03:00', TIMESTAMP WITH TIME ZONE '2024-04-10 23:59:59-03:00',1);
 INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ('2.0', TIMESTAMP WITH TIME ZONE '2024-02-01 10:00:00-03:00', TIMESTAMP WITH TIME ZONE '2024-05-01 23:59:59-03:00',2);
 INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ('3.0', TIMESTAMP WITH TIME ZONE '2024-03-15 10:00:00-03:00', TIMESTAMP WITH TIME ZONE '2024-06-15 23:59:59-03:00',3);
+
+INSERT INTO tb_resource (title, description, position, img_uri, type, external_link, offer_id) VALUES ('Aula de Introdução','Visão geral do curso e apresentação dos objetivos', 1,'https://img.com/intro.png','1', 'https://youtube.com/watch?v=intro123',1);
+INSERT INTO tb_resource (title, description, position, img_uri, type, external_link, offer_id) VALUES ('Material de Apoio','Slides e PDFs para acompanhamento das aulas',2,'https://img.com/material.png','2','https://drive.google.com/material123',1);
+INSERT INTO tb_resource (title, description, position, img_uri, type, external_link, offer_id) VALUES ('Fórum de Dúvidas','Espaço para tirar dúvidas com os instrutores',3,'https://img.com/forum.png','3','https://plataforma.com/forum',2);
