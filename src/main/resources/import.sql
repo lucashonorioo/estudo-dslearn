@@ -25,9 +25,24 @@ INSERT INTO tb_resource (title, description, position, img_uri, type, external_l
 INSERT INTO tb_resource (title, description, position, img_uri, type, external_link, offer_id) VALUES ('Material de Apoio','Slides e PDFs para acompanhamento das aulas',2,'https://img.com/material.png','2','https://drive.google.com/material123',1);
 INSERT INTO tb_resource (title, description, position, img_uri, type, external_link, offer_id) VALUES ('Fórum de Dúvidas','Espaço para tirar dúvidas com os instrutores',3,'https://img.com/forum.png','3','https://plataforma.com/forum',2);
 
-INSERT INTO tb_section (id, title, description, position, img_uri, resource_id, prerequisite_id) VALUES (1,'Introdução ao Curso','Primeiro contato com a plataforma e estrutura do curso',1,'https://img.com/intro.png',1,NULL);
-INSERT INTO tb_section (id, title, description, position, img_uri, resource_id, prerequisite_id) VALUES (2,'Configuração do Ambiente','Passo a passo para configurar o ambiente de desenvolvimento',2,'https://img.com/setup.png',1,1);
-INSERT INTO tb_section (id, title, description, position, img_uri, resource_id, prerequisite_id) VALUES (3,'Primeiro Projeto','Criação do primeiro projeto prático',3,'https://img.com/project.png',2,2);
+INSERT INTO tb_section (title, description, position, img_uri, resource_id, prerequisite_id) VALUES ('Introdução ao Curso','Primeiro contato com a plataforma e estrutura do curso',1,'https://img.com/intro.png',1,NULL);
+INSERT INTO tb_section (title, description, position, img_uri, resource_id, prerequisite_id) VALUES ('Configuração do Ambiente','Passo a passo para configurar o ambiente de desenvolvimento',2,'https://img.com/setup.png',1,1);
+INSERT INTO tb_section (title, description, position, img_uri, resource_id, prerequisite_id) VALUES ('Primeiro Projeto','Criação do primeiro projeto prático',3,'https://img.com/project.png',2,2);
 
 INSERT INTO tb_enrollment (user_id, offer_id, enroll_Moment, refund_Moment, available, only_Update) VALUES (1, 1, TIMESTAMP WITH TIME ZONE '2024-01-10 11:00:00-03:00', null, true, false);
 INSERT INTO tb_enrollment (user_id, offer_id, enroll_Moment, refund_Moment, available, only_Update) VALUES (2, 1, TIMESTAMP WITH TIME ZONE '2024-01-10 11:00:00-03:00', null, true, false);
+
+INSERT INTO tb_lesson (id, title, position, section_id) VALUES (1, 'Introdução ao Curso', 1, 1);
+INSERT INTO tb_content (id, text_content, video_uri) VALUES (1, 'Apresentação geral do curso e objetivos', 'https://video.com/intro');
+
+INSERT INTO tb_lesson (id, title, position, section_id) VALUES (2, 'Configuração do Ambiente', 2, 1);
+INSERT INTO tb_content (id, text_content, video_uri) VALUES (2, 'Instalação do Java, IDE e dependências', 'https://video.com/setup');
+
+INSERT INTO tb_lesson (id, title, position, section_id) VALUES (3, 'Primeiro Projeto', 3, 1);
+INSERT INTO tb_content (id, text_content, video_uri) VALUES (3, 'Criação do primeiro projeto Spring Boot', 'https://video.com/project');
+
+INSERT INTO tb_lesson (id, title, position, section_id) VALUES (4, 'Desafio Prático', 4, 1);
+INSERT INTO tb_task (id, description, question_count, approval_count, weight, due_date) VALUES (4, 'Implementar uma API simples seguindo o padrão apresentado', 10, 7, 1.0, TIMESTAMP '2024-06-30 23:59:59');
+
+INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (1, 1, 1);
+INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (4, 1, 2);

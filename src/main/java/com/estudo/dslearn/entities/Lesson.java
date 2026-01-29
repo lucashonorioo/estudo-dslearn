@@ -79,9 +79,9 @@ public abstract class Lesson {
 
     @Override
     public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Lesson lesson = (Lesson) o;
-        return Objects.equals(id, lesson.id);
+        if (!(o instanceof Lesson)) return false;
+        Lesson other = (Lesson) o;
+        return Objects.equals(id, other.id);
     }
 
     @Override
