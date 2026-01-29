@@ -17,7 +17,7 @@ public class Enrollment {
 
     @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Instant enrollMoment;
-    
+
     @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Instant refundMoment;
     private boolean available;

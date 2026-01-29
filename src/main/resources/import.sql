@@ -28,3 +28,6 @@ INSERT INTO tb_resource (title, description, position, img_uri, type, external_l
 INSERT INTO tb_section (id, title, description, position, img_uri, resource_id, prerequisite_id) VALUES (1,'Introdução ao Curso','Primeiro contato com a plataforma e estrutura do curso',1,'https://img.com/intro.png',1,NULL);
 INSERT INTO tb_section (id, title, description, position, img_uri, resource_id, prerequisite_id) VALUES (2,'Configuração do Ambiente','Passo a passo para configurar o ambiente de desenvolvimento',2,'https://img.com/setup.png',1,1);
 INSERT INTO tb_section (id, title, description, position, img_uri, resource_id, prerequisite_id) VALUES (3,'Primeiro Projeto','Criação do primeiro projeto prático',3,'https://img.com/project.png',2,2);
+
+INSERT INTO tb_enrollment (user_id, offer_id, enroll_Moment, refund_Moment, available, only_Update) VALUES (1, 1, TIMESTAMP WITH TIME ZONE '2024-01-10 11:00:00-03:00', null, true, false);
+INSERT INTO tb_enrollment (user_id, offer_id, enroll_Moment, refund_Moment, available, only_Update) VALUES (2, 1, TIMESTAMP WITH TIME ZONE '2024-01-10 11:00:00-03:00', null, true, false);
