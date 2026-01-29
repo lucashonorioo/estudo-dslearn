@@ -100,4 +100,8 @@ public class Enrollment {
     public List<Deliver> getDelivers() {
         return delivers;
     }
+
+    public EnrollmentPK getId() {
+        return id;
+    }
 }

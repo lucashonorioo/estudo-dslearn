@@ -31,6 +31,9 @@ public abstract class Lesson {
     @OneToMany(mappedBy = "lesson")
     private List<Deliver> delivers = new ArrayList<>();
 
+    @OneToMany(mappedBy = "lesson")
+    private List<Topic> topics = new ArrayList<>();
+
     public Lesson(){
 
     }
@@ -80,6 +83,10 @@ public abstract class Lesson {
 
     public List<Deliver> getDelivers() {
         return delivers;
+    }
+
+    public List<Topic> getTopics() {
+        return topics;
     }
 
     @Override

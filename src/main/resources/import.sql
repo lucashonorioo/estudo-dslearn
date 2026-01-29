@@ -56,3 +56,15 @@ INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Ativid
 INSERT INTO tb_deliver (uri, moment, status, feedback, correct_count, offer_id, user_id, lesson_id) VALUES ('https://github.com/lucas/repo/commit/abc123', TIMESTAMP WITH TIME ZONE '2024-01-20 09:15:00-03:00', 0, null, 0, 1, 1, 4);
 INSERT INTO tb_deliver (uri, moment, status, feedback, correct_count, offer_id, user_id, lesson_id) VALUES ('https://drive.google.com/file/d/entrega001', TIMESTAMP WITH TIME ZONE '2024-01-21 14:40:00-03:00', 1, 'Bom trabalho, tudo certo!', 10, 1, 2, 4);
 INSERT INTO tb_deliver (uri, moment, status, feedback, correct_count, offer_id, user_id, lesson_id) VALUES ('https://drive.google.com/file/d/entrega002', TIMESTAMP WITH TIME ZONE '2024-01-22 18:05:00-03:00', 2, 'Faltou implementar os endpoints de update.', 6, 1, 3, 4);
+
+INSERT INTO tb_topic (title, body, instant, lesson_id, author_id, offer_id, replay_id) VALUES ('Dúvida sobre o desafio', 'Não consegui implementar o endpoint PUT corretamente.', TIMESTAMP '2024-01-22 20:00:00', 4, 1, 1, null);
+INSERT INTO tb_topic (title, body, instant, lesson_id, author_id, offer_id, replay_id) VALUES ('Erro ao subir aplicação', 'A aplicação não inicia após adicionar o relacionamento.', TIMESTAMP '2024-01-23 09:30:00', 4, 2, 1, null);
+
+INSERT INTO tb_reply (body, moment, topic_id, author_id) VALUES ('Você precisa verificar o mapeamento do JoinColumn no controller.', TIMESTAMP '2024-01-22 21:10:00', 1, 3);
+INSERT INTO tb_reply (body, moment, topic_id, author_id) VALUES ('Confere se o método está anotado com @Transactional.', TIMESTAMP '2024-01-23 10:00:00', 2, 3);
+
+INSERT INTO tb_topic_likes (topic_id, user_id) VALUES (1, 2);
+INSERT INTO tb_topic_likes (topic_id, user_id) VALUES (1, 3);
+
+INSERT INTO tb_reply_likes (reply_id, user_id) VALUES (1, 1);
+INSERT INTO tb_reply_likes (reply_id, user_id) VALUES (1, 2);
