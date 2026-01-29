@@ -31,6 +31,8 @@ INSERT INTO tb_section (title, description, position, img_uri, resource_id, prer
 
 INSERT INTO tb_enrollment (user_id, offer_id, enroll_Moment, refund_Moment, available, only_Update) VALUES (1, 1, TIMESTAMP WITH TIME ZONE '2024-01-10 11:00:00-03:00', null, true, false);
 INSERT INTO tb_enrollment (user_id, offer_id, enroll_Moment, refund_Moment, available, only_Update) VALUES (2, 1, TIMESTAMP WITH TIME ZONE '2024-01-10 11:00:00-03:00', null, true, false);
+INSERT INTO tb_enrollment (user_id, offer_id, enroll_moment, refund_moment, available, only_update) VALUES (3, 1, TIMESTAMP WITH TIME ZONE '2024-01-10 12:00:00-03:00', null, true, true);
+
 
 INSERT INTO tb_lesson (id, title, position, section_id) VALUES (1, 'Introdução ao Curso', 1, 1);
 INSERT INTO tb_content (id, text_content, video_uri) VALUES (1, 'Apresentação geral do curso e objetivos', 'https://video.com/intro');
@@ -46,3 +48,11 @@ INSERT INTO tb_task (id, description, question_count, approval_count, weight, du
 
 INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (1, 1, 1);
 INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (4, 1, 2);
+
+INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Nova aula disponível no curso', TIMESTAMP WITH TIME ZONE '2024-01-15 09:00:00-03:00', false, '/courses/1/offers/1', 1);
+INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Atividade liberada para entrega', TIMESTAMP WITH TIME ZONE '2024-01-16 10:30:00-03:00', false, '/lessons/4/task', 2);
+INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Atividade corrigida pelo instrutor', TIMESTAMP WITH TIME ZONE '2024-01-18 18:45:00-03:00', true, '/deliveries/2', 2);
+
+INSERT INTO tb_deliver (uri, moment, status, feedback, correct_count, offer_id, user_id, lesson_id) VALUES ('https://github.com/lucas/repo/commit/abc123', TIMESTAMP WITH TIME ZONE '2024-01-20 09:15:00-03:00', 0, null, 0, 1, 1, 4);
+INSERT INTO tb_deliver (uri, moment, status, feedback, correct_count, offer_id, user_id, lesson_id) VALUES ('https://drive.google.com/file/d/entrega001', TIMESTAMP WITH TIME ZONE '2024-01-21 14:40:00-03:00', 1, 'Bom trabalho, tudo certo!', 10, 1, 2, 4);
+INSERT INTO tb_deliver (uri, moment, status, feedback, correct_count, offer_id, user_id, lesson_id) VALUES ('https://drive.google.com/file/d/entrega002', TIMESTAMP WITH TIME ZONE '2024-01-22 18:05:00-03:00', 2, 'Faltou implementar os endpoints de update.', 6, 1, 3, 4);
